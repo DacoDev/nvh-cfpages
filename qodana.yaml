@@ -3,30 +3,49 @@
 #             https://www.jetbrains.com/help/qodana/qodana-yaml.html            #
 #-------------------------------------------------------------------------------#
 version: "1.0"
-
 #Specify inspection profile for code analysis
 profile:
   name: qodana.starter
-
 #Enable inspections
 #include:
 #  - name: <SomeEnabledInspectionId>
-
 #Disable inspections
 #exclude:
 #  - name: <SomeDisabledInspectionId>
 #    paths:
 #      - <path/where/not/run/inspection>
-
 #The following options are only applied in CI/CD environment
 #These options are ignored during local run
-
 #Execute shell command before Qodana execution
 #bootstrap: sh ./prepare-qodana.sh
-
 #Install IDE plugins before Qodana execution
 #plugins:
 #  - id: <plugin.id> #(plugin id can be found at https://plugins.jetbrains.com)
-
 #Specify Qodana linter for analysis
 linter: jetbrains/qodana-js:latest
+include:
+  - name: HtmlFormInputWithoutLabel
+  - name: HtmlRequiredAltAttribute
+  - name: HtmlRequiredLangAttribute
+  - name: HtmlRequiredSummaryAttribute
+  - name: HtmlRequiredTitleAttribute
+  - name: HtmlRequiredTitleElement
+  - name: CheckEmptyScriptTag
+  - name: HtmlUnknownBooleanAttribute
+  - name: CheckValidXmlInScriptTagBody
+  - name: CheckImageSize
+  - name: HtmlMissingClosingTag
+  - name: RequiredAttributes
+  - name: HtmlDeprecatedAttribute
+  - name: HtmlDeprecatedTag
+  - name: HtmlPresentationalElement
+  - name: HtmlExtraClosingTag
+  - name: HtmlUnknownAttribute
+  - name: HtmlUnknownTag
+  - name: HtmlUnknownTarget
+  - name: HtmlUnknownAnchorTarget
+  - name: HtmlNonExistentInternetResource
+  - name: HtmlWrongAttributeValue
+  - name: CssInvalidHtmlTagReference
+  - name: JsonStandardCompliance
+  - name: StringLiteralBreaksHTMLJS
